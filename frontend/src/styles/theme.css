@@ -1,0 +1,179 @@
+/* ==============================================================================
+   NEXORA Factory Design System Tokens (from DESIGN.md)
+   Stark black control surface with bone figures and functional accents.
+   ============================================================================== */
+
+:root {
+  /* Color Tokens */
+  --color-obsidian-canvas: #101010;
+  --color-carbon-lift: #1d1a18;
+  --color-ash-stroke: #3d3a39;
+  --color-graphite-mid: #4d4947;
+  --color-warm-granite: #8a8380;
+  --color-pale-stone: #b8b3b0;
+  --color-bone: #eeeeee;
+  --color-chalk: #fafafa;
+  --color-signal-orange: #ee6018;
+  --color-metric-green: #a0ca92;
+  --color-alert-red: #d9534f;
+
+  /* Typography */
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Spacing Scale (8px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Borders & Radii */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --border-hairline: 1px solid var(--color-ash-stroke);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-obsidian-canvas);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Typography Utilities */
+.mono-caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-warm-granite);
+}
+
+.mono-metric {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-bone);
+}
+
+/* Base Surfaces & Buttons */
+.card-surface {
+  background-color: var(--color-carbon-lift);
+  border: var(--border-hairline);
+  border-radius: var(--radius-xs);
+  padding: var(--space-4);
+}
+
+.card-light {
+  background-color: var(--color-bone);
+  color: var(--color-obsidian-canvas);
+  border-radius: var(--radius-xs);
+  padding: var(--space-4);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-xs);
+  border: var(--border-hairline);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-chalk);
+  color: var(--color-obsidian-canvas);
+  border-color: var(--color-chalk);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #e5e5e5;
+}
+
+.btn-secondary {
+  background-color: var(--color-carbon-lift);
+  color: var(--color-bone);
+  border-color: var(--color-ash-stroke);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #272422;
+  border-color: var(--color-warm-granite);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Status Indicators */
+.pulse-indicator {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.pulse-green {
+  background-color: var(--color-metric-green);
+  box-shadow: 0 0 6px var(--color-metric-green);
+}
+
+.pulse-orange {
+  background-color: var(--color-signal-orange);
+  box-shadow: 0 0 6px var(--color-signal-orange);
+}
+
+.pulse-red {
+  background-color: var(--color-alert-red);
+  box-shadow: 0 0 6px var(--color-alert-red);
+}
+
+/* Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.data-table th {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-warm-granite);
+  text-transform: uppercase;
+  border-bottom: var(--border-hairline);
+  letter-spacing: 0.05em;
+}
+
+.data-table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid #23201e;
+  color: var(--color-bone);
+}
+
+.data-table tr:hover td {
+  background-color: #161413;
+}

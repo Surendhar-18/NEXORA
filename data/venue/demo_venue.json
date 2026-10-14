@@ -1,0 +1,456 @@
+{
+  "venue_id": "venue_triveni",
+  "venue_name": "Triveni Festival Grounds",
+  "description": "Grand Cultural and Congregation Grounds for Festival Operations",
+  "center": {
+    "latitude": 25.4358,
+    "longitude": 81.8463
+  },
+  "default_zoom": 17,
+  "zones": [
+    {
+      "id": "zone_main_gate",
+      "name": "Main Gate Area",
+      "polygon": [
+        [25.4350, 81.8450],
+        [25.4365, 81.8450],
+        [25.4365, 81.8465],
+        [25.4350, 81.8465]
+      ],
+      "color": "#3B82F6",
+      "camera_ids": ["cam_01", "cam_02"],
+      "description": "Primary public ingress and ticketing perimeter"
+    },
+    {
+      "id": "zone_north_plaza",
+      "name": "North Plaza",
+      "polygon": [
+        [25.4368, 81.8455],
+        [25.4388, 81.8455],
+        [25.4388, 81.8475],
+        [25.4368, 81.8475]
+      ],
+      "color": "#10B981",
+      "camera_ids": ["cam_03"],
+      "description": "Open gathering plaza connecting to northern perimeter exits"
+    },
+    {
+      "id": "zone_east_wing",
+      "name": "East Wing",
+      "polygon": [
+        [25.4355, 81.8475],
+        [25.4372, 81.8475],
+        [25.4372, 81.8498],
+        [25.4355, 81.8498]
+      ],
+      "color": "#8B5CF6",
+      "camera_ids": ["cam_04"],
+      "description": "Secondary gathering promenade leading toward riverbank"
+    },
+    {
+      "id": "zone_south_market",
+      "name": "South Market",
+      "polygon": [
+        [25.4332, 81.8455],
+        [25.4350, 81.8455],
+        [25.4350, 81.8478],
+        [25.4332, 81.8478]
+      ],
+      "color": "#F59E0B",
+      "camera_ids": ["cam_05"],
+      "description": "Commercial stalls, amenities, and transit connection point"
+    },
+    {
+      "id": "zone_west_garden",
+      "name": "West Garden",
+      "polygon": [
+        [25.4355, 81.8432],
+        [25.4372, 81.8432],
+        [25.4372, 81.8452],
+        [25.4355, 81.8452]
+      ],
+      "color": "#EC4899",
+      "camera_ids": ["cam_06"],
+      "description": "Open shaded garden and surge buffer zone"
+    },
+    {
+      "id": "zone_central_stage",
+      "name": "Central Stage",
+      "polygon": [
+        [25.4355, 81.8458],
+        [25.4368, 81.8458],
+        [25.4368, 81.8474],
+        [25.4355, 81.8474]
+      ],
+      "color": "#EF4444",
+      "camera_ids": ["cam_07", "cam_08"],
+      "description": "Main presentation arena and high-density congregation zone"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "gate_main",
+      "name": "Main Gate",
+      "type": "gate",
+      "latitude": 25.4352,
+      "longitude": 81.8455,
+      "zone_id": "zone_main_gate",
+      "capacity": 500,
+      "description": "Main festival entrance and ticket verification turnstiles"
+    },
+    {
+      "id": "junction_1",
+      "name": "Main Concourse Junction",
+      "type": "junction",
+      "latitude": 25.4358,
+      "longitude": 81.8458,
+      "zone_id": "zone_main_gate",
+      "capacity": 400,
+      "description": "Central intersection distributing ingress crowd"
+    },
+    {
+      "id": "junction_2",
+      "name": "North Plaza Junction",
+      "type": "junction",
+      "latitude": 25.4372,
+      "longitude": 81.8460,
+      "zone_id": "zone_north_plaza",
+      "capacity": 400,
+      "description": "Walkway junction between stage and north plaza"
+    },
+    {
+      "id": "junction_3",
+      "name": "East Wing Junction",
+      "type": "junction",
+      "latitude": 25.4365,
+      "longitude": 81.8480,
+      "zone_id": "zone_east_wing",
+      "capacity": 350,
+      "description": "Access fork for eastern promenade and river egress"
+    },
+    {
+      "id": "junction_4",
+      "name": "Central Stage Junction",
+      "type": "junction",
+      "latitude": 25.4360,
+      "longitude": 81.8468,
+      "zone_id": "zone_central_stage",
+      "capacity": 600,
+      "description": "Primary perimeter distributor around stage area"
+    },
+    {
+      "id": "junction_5",
+      "name": "South Market Junction",
+      "type": "junction",
+      "latitude": 25.4342,
+      "longitude": 81.8465,
+      "zone_id": "zone_south_market",
+      "capacity": 350,
+      "description": "Market concourse and service access junction"
+    },
+    {
+      "id": "junction_6",
+      "name": "West Garden Junction",
+      "type": "junction",
+      "latitude": 25.4362,
+      "longitude": 81.8442,
+      "zone_id": "zone_west_garden",
+      "capacity": 300,
+      "description": "Western bypass and relaxation garden junction"
+    },
+    {
+      "id": "junction_7",
+      "name": "North Concourse Junction",
+      "type": "junction",
+      "latitude": 25.4378,
+      "longitude": 81.8468,
+      "zone_id": "zone_north_plaza",
+      "capacity": 400,
+      "description": "Northern exit approach junction"
+    },
+    {
+      "id": "exit_north",
+      "name": "North Perimeter Exit",
+      "type": "exit",
+      "latitude": 25.4385,
+      "longitude": 81.8470,
+      "zone_id": "zone_north_plaza",
+      "capacity": 800,
+      "description": "Direct evacuation gate to northern arterial road"
+    },
+    {
+      "id": "exit_east",
+      "name": "East Riverbank Exit",
+      "type": "exit",
+      "latitude": 25.4362,
+      "longitude": 81.8495,
+      "zone_id": "zone_east_wing",
+      "capacity": 800,
+      "description": "Perimeter exit opening to eastern ghats promenade"
+    },
+    {
+      "id": "exit_south",
+      "name": "South Highway Exit",
+      "type": "exit",
+      "latitude": 25.4335,
+      "longitude": 81.8465,
+      "zone_id": "zone_south_market",
+      "capacity": 800,
+      "description": "Egress corridor to southern bus depot and highway"
+    },
+    {
+      "id": "exit_west",
+      "name": "West Transit Exit",
+      "type": "exit",
+      "latitude": 25.4362,
+      "longitude": 81.8435,
+      "zone_id": "zone_west_garden",
+      "capacity": 800,
+      "description": "Egress to western transit terminal"
+    }
+  ],
+  "edges": [
+    {
+      "id": "walk_main_j1",
+      "from_node": "gate_main",
+      "to_node": "junction_1",
+      "name": "Main Gate Approach",
+      "distance_meters": 80.0,
+      "width_meters": 8.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_1_2",
+      "from_node": "junction_1",
+      "to_node": "junction_2",
+      "name": "North Concourse Walkway",
+      "distance_meters": 160.0,
+      "width_meters": 6.0,
+      "congestion_penalty": 10.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_1_4",
+      "from_node": "junction_1",
+      "to_node": "junction_4",
+      "name": "Central Stage Promenade",
+      "distance_meters": 110.0,
+      "width_meters": 8.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_1_6",
+      "from_node": "junction_1",
+      "to_node": "junction_6",
+      "name": "West Garden Path",
+      "distance_meters": 170.0,
+      "width_meters": 5.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_1_5",
+      "from_node": "junction_1",
+      "to_node": "junction_5",
+      "name": "South Market Avenue",
+      "distance_meters": 190.0,
+      "width_meters": 6.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_2_7",
+      "from_node": "junction_2",
+      "to_node": "junction_7",
+      "name": "North Plaza Corridor",
+      "distance_meters": 100.0,
+      "width_meters": 6.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_7_exit_n",
+      "from_node": "junction_7",
+      "to_node": "exit_north",
+      "name": "North Egress Route",
+      "distance_meters": 80.0,
+      "width_meters": 8.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_2_4",
+      "from_node": "junction_2",
+      "to_node": "junction_4",
+      "name": "Stage North Bypass",
+      "distance_meters": 150.0,
+      "width_meters": 5.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_4_3",
+      "from_node": "junction_4",
+      "to_node": "junction_3",
+      "name": "Stage East Link",
+      "distance_meters": 130.0,
+      "width_meters": 6.0,
+      "congestion_penalty": 10.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_3_7",
+      "from_node": "junction_3",
+      "to_node": "junction_7",
+      "name": "East-North Connecting Walkway",
+      "distance_meters": 180.0,
+      "width_meters": 5.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_3_exit_e",
+      "from_node": "junction_3",
+      "to_node": "exit_east",
+      "name": "East Riverbank Egress",
+      "distance_meters": 150.0,
+      "width_meters": 8.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_4_5",
+      "from_node": "junction_4",
+      "to_node": "junction_5",
+      "name": "Stage South Link",
+      "distance_meters": 200.0,
+      "width_meters": 5.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_5_exit_s",
+      "from_node": "junction_5",
+      "to_node": "exit_south",
+      "name": "South Highway Egress",
+      "distance_meters": 80.0,
+      "width_meters": 8.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_6_2",
+      "from_node": "junction_6",
+      "to_node": "junction_2",
+      "name": "West-North Bypass",
+      "distance_meters": 210.0,
+      "width_meters": 4.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_6_exit_w",
+      "from_node": "junction_6",
+      "to_node": "exit_west",
+      "name": "West Transit Egress",
+      "distance_meters": 80.0,
+      "width_meters": 8.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    },
+    {
+      "id": "walk_5_6",
+      "from_node": "junction_5",
+      "to_node": "junction_6",
+      "name": "South-West Perimeter Link",
+      "distance_meters": 280.0,
+      "width_meters": 4.0,
+      "congestion_penalty": 0.0,
+      "hazard_penalty": 0.0,
+      "is_bidirectional": true
+    }
+  ],
+  "cameras": [
+    {
+      "id": "cam_01",
+      "name": "Main Gate Outer Camera",
+      "latitude": 25.4351,
+      "longitude": 81.8454,
+      "zone_id": "zone_main_gate",
+      "direction": "north"
+    },
+    {
+      "id": "cam_02",
+      "name": "Main Gate Concourse Camera",
+      "latitude": 25.4357,
+      "longitude": 81.8459,
+      "zone_id": "zone_main_gate",
+      "direction": "north-east"
+    },
+    {
+      "id": "cam_03",
+      "name": "North Plaza Camera",
+      "latitude": 25.4373,
+      "longitude": 81.8462,
+      "zone_id": "zone_north_plaza",
+      "direction": "south"
+    },
+    {
+      "id": "cam_04",
+      "name": "East Wing Camera",
+      "latitude": 25.4364,
+      "longitude": 81.8482,
+      "zone_id": "zone_east_wing",
+      "direction": "east"
+    },
+    {
+      "id": "cam_05",
+      "name": "South Market Camera",
+      "latitude": 25.4340,
+      "longitude": 81.8466,
+      "zone_id": "zone_south_market",
+      "direction": "north"
+    },
+    {
+      "id": "cam_06",
+      "name": "West Garden Camera",
+      "latitude": 25.4361,
+      "longitude": 81.8440,
+      "zone_id": "zone_west_garden",
+      "direction": "west"
+    },
+    {
+      "id": "cam_07",
+      "name": "Central Stage Front Camera",
+      "latitude": 25.4359,
+      "longitude": 81.8467,
+      "zone_id": "zone_central_stage",
+      "direction": "north"
+    },
+    {
+      "id": "cam_08",
+      "name": "Central Stage Rear Camera",
+      "latitude": 25.4365,
+      "longitude": 81.8469,
+      "zone_id": "zone_central_stage",
+      "direction": "south"
+    }
+  ]
+}

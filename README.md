@@ -78,4 +78,8 @@ NEXORA aims to improve situational awareness, event review, incident coordinatio
 
 ## License
 
+<<<<<<< HEAD
 See the `LICENSE` file for the terms governing use and distribution.
+=======
+See the `LICENSE` file for the terms governing use and distribution.
+>>>>>>> origin/main

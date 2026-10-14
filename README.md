@@ -83,3 +83,5 @@ See the `LICENSE` file for the terms governing use and distribution.
 =======
 See the `LICENSE` file for the terms governing use and distribution.
 >>>>>>> origin/main
+>>>>>>><img width="770" height="1884" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/ac945999-11b0-495c-8bb9-633366a2f28c" />
+
